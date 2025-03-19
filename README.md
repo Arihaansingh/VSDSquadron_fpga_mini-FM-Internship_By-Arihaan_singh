@@ -95,7 +95,7 @@ The PCF (Physical Constraints File) can be acessed here [(PCF)](https://github.c
 
 <details>
   <summary><STRONG> PCF analysis</STRONG></summary>
-We can create the Physical Constraints File (PCF) for the FPGA project using the [VSDSquadronFM datasheet](https://www.vlsisystemdesign.com/wp-content/uploads/2025/01/VSDSquadronFMDatasheet.pdf). Here's how:
+We can create the Physical Constraints File (PCF) for the FPGA project using the [Datasheet](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VSDSquadronFMDatasheet.pdf). Here's how:
 
 1. Identify I/O Ports in Your Verilog Module: Examine your Verilog code to list all input and output ports that need to be mapped to physical pins.
 

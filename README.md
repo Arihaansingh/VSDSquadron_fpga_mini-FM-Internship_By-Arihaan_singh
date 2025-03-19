@@ -11,7 +11,7 @@ The VSDSquadron FPGA Mini (FM) is a compact and low-cost development board desig
 `testwire` **(Output):** Test signal output
 
 <details>
-  <summary>▶ Module Analysis</summary>
+  <summary><STRONG> Verilog module overview</STRONG></summary>
 
 ### Port Analysis:
 
@@ -84,11 +84,13 @@ The module generates its own clock signal using a **high-frequency oscillator** 
 To assist with debugging and monitoring, **bit 5** of this counter is linked to the `testwire` output. This connection allows external systems to observe and verify the clock’s operation.
 
 #### RGB LED Control and Configuration
-The RGB LED driver (SB_RGBA_DRV) is responsible for managing the brightness and color of the LED. It operates with the following settings:
+The **RGB LED driver** (`SB_RGBA_DRV`) is responsible for managing the brightness and color of the LED. It operates with the following settings:
 
-Uses a current-controlled output to regulate brightness efficiently.
-Each LED color (Red, Green, Blue) is controlled via Pulse Width Modulation (PWM).
-Predefined brightness levels:
-Blue LED is set to maximum brightness (RGB2PWM = 1'b1).
-Red and Green LEDs are set to minimum brightness (RGB0PWM = 1'b0, RGB1PWM = 1'b0).
-This setup ensures that the LED displays the correct color with stable and power-efficient performance.
+- Uses a **current-controlled** output to regulate brightness efficiently.
+- Each LED color (Red, Green, Blue) is controlled via **Pulse Width Modulation (PWM)**.
+- **Predefined brightness levels:**
+            - **Blue LED** is set to **maximum brightness** (`RGB2PWM = 1'b1`).
+            - **Red and Green LEDs** are set to **minimum brightness** (`RGB0PWM = 1'b0`, `RGB1PWM = 1'b0`).
+In short, **This Verilog module controls an RGB LED using an internal oscillator and a frequency counter while providing a test signal for monitoring.**
+</details>
+HH

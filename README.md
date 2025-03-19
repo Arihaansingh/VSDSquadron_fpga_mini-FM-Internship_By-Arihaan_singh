@@ -1,15 +1,8 @@
 # VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh
 The VSDSquadron FPGA Mini (FM) is a compact and low-cost development board designed for FPGA prototyping and embedded system projects. This board provides a seamless hardware development experience with an integrated programmer, versatile GPIO access, and onboard memory, making it ideal for students, hobbyists, and developers exploring FPGA-based designs. [(Source)](https://www.vlsisystemdesign.com/vsdsquadronfm/)
-## Task 1
+## Task 1 Understanding and Implementing the Verilog Code on the VSDSquadron FPGA Mini Board
 ### Step 1: Understanding the Verilog code
-**Review the module declaration and understand the purpose of each input and output port:**
-
-`led_red`, `led_blue`, `led_green` **(Output):** Control the RGB LED
-
-`hw_clk` **(Input):** Hardware oscillator clock input
-
-`testwire` **(Output):** Test signal output
-
+The Verilog code can be accessed from here [Verilog code](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/top.v)
 <details>
   <summary><STRONG> Verilog module overview</STRONG></summary>
 
@@ -93,4 +86,5 @@ The **RGB LED driver** (`SB_RGBA_DRV`) is responsible for managing the brightnes
             - **Red and Green LEDs** are set to **minimum brightness** (`RGB0PWM = 1'b0`, `RGB1PWM = 1'b0`).
 In short, **This Verilog module controls an RGB LED using an internal oscillator and a frequency counter while providing a test signal for monitoring.**
 </details>
-HH
+
+### Step 2: 

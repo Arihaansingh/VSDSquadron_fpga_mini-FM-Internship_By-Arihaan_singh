@@ -85,6 +85,7 @@ The **RGB LED driver** (`SB_RGBA_DRV`) is responsible for managing the brightnes
 - **Predefined brightness levels:**
             - **Blue LED** is set to **maximum brightness** (`RGB2PWM = 1'b1`).
             - **Red and Green LEDs** are set to **minimum brightness** (`RGB0PWM = 1'b0`, `RGB1PWM = 1'b0`).
+
 In short, **This Verilog module controls an RGB LED using an internal oscillator and a frequency counter while providing a test signal for monitoring.**
 </details>
 

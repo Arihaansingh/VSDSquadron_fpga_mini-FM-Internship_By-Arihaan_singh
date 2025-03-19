@@ -2,7 +2,8 @@
 The VSDSquadron FPGA Mini (FM) is a compact and low-cost development board designed for FPGA prototyping and embedded system projects. This board provides a seamless hardware development experience with an integrated programmer, versatile GPIO access, and onboard memory, making it ideal for students, hobbyists, and developers exploring FPGA-based designs. [(Source)](https://www.vlsisystemdesign.com/vsdsquadronfm/)
 ## Task 1 Understanding and Implementing the Verilog Code on the VSDSquadron FPGA Mini Board
 ### Step 1: Understanding the Verilog code
-The Verilog code can be accessed from here [Verilog code](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VSDFM_top_module.v)
+The Verilog code can be accessed from here [Verilog code](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VSDFM_top_module.v) This Verilog module controls an RGB LED using an internal oscillator and a counter, with a test signal for monitoring and predefined brightness settings for the LEDs.
+
 <details>
   <summary><STRONG> Verilog module overview</STRONG></summary>
 
@@ -68,15 +69,15 @@ The module includes an RGB LED driver that controls the brightness and color of 
 
 - Each LED is configured with minimal current (`0b000001`) to optimize power consumption.
 
-#### Overview of the RGB LED Controller
+### Purpose 
 This Verilog module is designed to control an RGB LED while also handling internal timing functions. It includes a stable built-in clock and ensures smooth LED operation. Additionally, it features a test signal that allows monitoring of system behavior. The module is ideal for embedded applications that require precise LED control without relying on external timing components.
 
-#### Clock System and Timing Mechanism
+### Description of internal logic and oscillator
 The module generates its own clock signal using a **high-frequency oscillator** (`SB_HFOSC`). This oscillator serves as the timing source for the entire system. A **28-bit counter** is connected to the oscillator’s output, which helps keep track of time and internal processes.
 
 To assist with debugging and monitoring, **bit 5** of this counter is linked to the `testwire` output. This connection allows external systems to observe and verify the clock’s operation.
 
-#### RGB LED Control and Configuration
+### Functionality of the RGB LED driver and its relationship to the outputs
 The **RGB LED driver** (`SB_RGBA_DRV`) is responsible for managing the brightness and color of the LED. It operates with the following settings:
 
 - Uses a **current-controlled** output to regulate brightness efficiently.

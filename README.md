@@ -89,4 +89,6 @@ The **RGB LED driver** (`SB_RGBA_DRV`) is responsible for managing the brightnes
 In short, **This Verilog module controls an RGB LED using an internal oscillator and a frequency counter while providing a test signal for monitoring.**
 </details>
 
-### Step 2: 
+### Step 2: Creating the PCF File
+
+The PCF

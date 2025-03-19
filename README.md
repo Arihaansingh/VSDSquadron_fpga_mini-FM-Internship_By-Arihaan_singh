@@ -101,9 +101,42 @@ We can easily create a Physical Constraints File (PCF). We can create the Physic
   
 1. Identify I/O Ports in Your Verilog Module: Examine your Verilog code to list all input and output ports that need to be mapped to physical pins.
 
-2. Consult the VSDSquadronFM Datasheet: The datasheet provides detailed information about the board's pinout and functionalities. Locate the section detailing the FPGA's pin assignments to understand which physical pins correspond to specific functions. 
-VLSI SYSTEM DESIGN
+2. Consult the VSDSquadronFM Datasheet: The datasheet provides detailed information about the board's pinout and functionalities. Locate the section detailing the FPGA's pin assignments to understand which physical pins correspond to specific functions.
+   ![image](https://github.com/user-attachments/assets/47e8710a-fb94-42d5-94e4-c63b50327710)
+See this image of the Datasheet which tells about the pin assignments
 
-3. Create the PCF File: Using the information from the datasheet, map each Verilog I/O port to the appropriate physical pin. For example, if your Verilog module has an output led_red and the datasheet indicates that the red LED is connected to pin 39, your PCF entry would be:
+4. Create the PCF File: Using the information from the datasheet, map each Verilog I/O port to the appropriate physical pin. For example, if your Verilog module has an output led_red and the datasheet indicates that the red LED is connected to pin 39, your PCF entry would be:
+```
+set_io  led_red	39
+```
+So for this project we have created the pcf
+![image](https://github.com/user-attachments/assets/6ec66888-4189-416a-a14e-0b1065d70a05)
+More detailed explanation of each set_io command in your Physical Constraints File (PCF):
 
+Understanding set_io Commands in PCF
+The set_io command is used in FPGA development to map logical signals (used in HDL code) to specific physical pins on the FPGA. This ensures that inputs and outputs in your Verilog/VHDL code are correctly connected to the corresponding hardware pins.
+
+Breakdown of Each set_io Command
+1. set_io led_red 39
+Purpose: This command assigns the logical signal led_red to pin 39 on the FPGA.
+Functionality: When your HDL code sets led_red to HIGH (1), it will turn on the red LED connected to pin 39. Similarly, setting it to LOW (0) will turn it off.
+Use Case: Typically used for LED status indicators (e.g., power, error, activity).
+2. set_io led_blue 40
+Purpose: Maps the led_blue signal to pin 40.
+Functionality: This allows the FPGA to control a blue LED, which will turn on/off based on the signal from the Verilog/VHDL code.
+Use Case: Used for visual indicators, such as showing different states of the system.
+3. set_io led_green 41
+Purpose: Assigns the led_green signal to pin 41.
+Functionality: The FPGA can now control a green LED, switching it on or off as needed.
+Use Case: Often used for status LEDs, such as indicating successful operation.
+4. set_io hw_clk 20
+Purpose: Maps hw_clk (hardware clock signal) to pin 20.
+Functionality: This allows the FPGA to receive clock inputs through pin 20, which are essential for timing operations inside the FPGA.
+Use Case: Used for timing-sensitive applications, such as counters, PWM signals, or high-speed data processing.
+5. set_io testwire 17
+Purpose: Assigns testwire to pin 17.
+Functionality: This is generally used for debugging or testing, allowing a test signal to be monitored or controlled externally.
+Use Case: Can be used for temporary signal monitoring, debugging FPGA behavior, or testing different pin configurations.
+Summary
+Each set_io command plays a crucial role in defining FPGA pin assignments. Properly mapping logical signals to physical pins ensures correct functionality of the design and prevents errors in hardware interaction. These assignments are especially important when dealing with LEDs, clocks, and debugging signals, as they directly impact how the FPGA interacts with external components.
 

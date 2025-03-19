@@ -4,9 +4,12 @@ The VSDSquadron FPGA Mini (FM) is a compact and low-cost development board desig
 ### Step 1: Understanding the Verilog code
 **Review the module declaration and understand the purpose of each input and output port:**
 
-led_red, led_blue, led_green (Output): Control the RGB LED
-hw_clk (Input): Hardware oscillator clock input
-testwire (Output): Test signal output
+`led_red`, `led_blue`, `led_green` **(Output):** Control the RGB LED
+
+`hw_clk` **(Input):** Hardware oscillator clock input
+
+`testwire` **(Output):** Test signal output
+
 <details>
   <summary>▶ Module Analysis</summary>
 

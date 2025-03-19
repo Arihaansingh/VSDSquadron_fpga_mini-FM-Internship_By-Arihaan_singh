@@ -91,4 +91,4 @@ In short, **This Verilog module controls an RGB LED using an internal oscillator
 
 ### Step 2: Creating the PCF File
 
-The PCF file can be acessed here [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/edit/main/VSDFM.pcf)
+The PCF file can be acessed here [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/edit/main/VsdFpgaMini.pcf)

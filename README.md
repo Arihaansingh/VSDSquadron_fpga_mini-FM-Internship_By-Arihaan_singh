@@ -37,38 +37,43 @@ module top (
 The module consists of three main internal components, each serving a distinct function:
 
 #### 1. Internal Oscillator (SB_HFOSC)
-The internal oscillator generates a stable clock signal required for timing operations. It is configured with a clock division value of 0b10, which corresponds to binary 2.
+The internal oscillator generates a stable clock signal required for timing operations. It is configured with a clock division value of `0b10`, which corresponds to binary 2.
 
-Power and Enable Signals:
+**Power and Enable Signals:**
 
-CLKHFPU = 1'b1: Powers up the oscillator.
-CLKHFEN = 1'b1: Enables the oscillator.
-Output Signal:
+`CLKHFPU = 1'b1`: Powers up the oscillator.
+`CLKHFEN = 1'b1`: Enables the oscillator.
 
-CLKHF: This is the oscillator's output, connected to the internal signal int_osc, which drives the frequency counter and other timing-dependent operations.
+**Output Signal:**
+
+`CLKHF`: This is the oscillator's output, connected to the internal signal `int_osc`, which drives the frequency counter and other timing-dependent operations.
 #### 2. Frequency Counter Logic
-This module includes a 28-bit counter, named frequency_counter_i, which increments on every rising edge of int_osc.
+This module includes a **28-bit counter**, named `frequency_counter_i`, which increments on every rising edge of `int_osc`.
 
-Functionality:
-The counter continuously increases its value, providing a timing reference within the module.
-Bit 5 of this counter is specifically connected to testwire, allowing external monitoring of the frequency.
-This setup helps verify the oscillator's operation and timing accuracy.
+**Functionality:**
+- The counter continuously increases its value, providing a timing reference within the module.
+- Bit 5 of this counter is specifically connected to `testwire`, allowing external monitoring of the frequency.
+- This setup helps verify the oscillator's operation and timing accuracy.
 
 #### 3. RGB LED Driver (SB_RGBA_DRV)
 The module includes an RGB LED driver that controls the brightness and color of the LED.
 
-Configuration and Control:
+**Configuration and Control:**
 
-RGBLEDEN = 1'b1: Enables the LED operation.
-CURREN = 1'b1: Enables current control for LED brightness.
-Color Output Settings:
+- `RGBLEDEN = 1'b1`: Enables the LED operation.
+- `CURREN = 1'b1`: Enables current control for LED brightness.
 
-Red LED (RGB0): Set to minimum brightness (RGB0PWM = 1'b0).
-Green LED (RGB1): Set to minimum brightness (RGB1PWM = 1'b0).
-Blue LED (RGB2): Set to maximum brightness (RGB2PWM = 1'b1).
-Current Settings:
+**Color Output Settings:**
 
-Each LED is configured with minimal current (0b000001) to optimize power consumption.
+- **Red LED** (`RGB0`)**:** Set to minimum brightness (RGB0PWM = 1'b0).
+
+- **Green LED** (`RGB1`)**:** Set to minimum brightness (RGB1PWM = 1'b0).
+
+- **Blue LED** (`RGB2`)**:** Set to maximum brightness (RGB2PWM = 1'b1).
+
+**Current Settings:**
+
+- Each LED is configured with minimal current (`0b000001`) to optimize power consumption.
 
 Overview of the RGB LED Controller
 This Verilog module is designed to control an RGB LED while also handling internal timing functions. It includes a stable built-in clock and ensures smooth LED operation. Additionally, it features a test signal that allows monitoring of system behavior. The module is ideal for embedded applications that require precise LED control without relying on external timing components.

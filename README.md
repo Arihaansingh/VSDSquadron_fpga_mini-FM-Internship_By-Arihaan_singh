@@ -148,3 +148,49 @@ Use Case: Can be used for temporary signal monitoring, debugging FPGA behavior, 
 ##### Summary
 Each `set_io` command plays a crucial role in defining FPGA pin assignments. Properly mapping logical signals to physical pins ensures correct functionality of the design and prevents errors in hardware interaction. These assignments are especially important when dealing with LEDs, clocks, and debugging signals, as they directly impact how the FPGA interacts with external components.
 </details>
+
+### Step 3 Integrating with the VSDSquadron FPGA Mini Board
+Integrating the VSDSquadron FPGA Mini Board involves understanding its hardware specifications, configuring the Physical Constraints File (PCF), and flashing the Verilog design onto the board. The first step is reviewing the board’s datasheet to map logical signals in the Verilog code to physical pins. Proper connections must be ensured, typically using a USB-C interface and FTDI for communication.
+
+<details>
+      <summary><STRONG>VSDSquadron FM integration</STRONG></summary>
+
+#### Steps to Follow for Integrating the VSDSquadron FPGA Mini Board
+##### 1. Review the Board Datasheet
+Examine the [Datasheet](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VSDSquadronFMDatasheet.pdf) to understand its features, pin configurations, and necessary connections.
+Identify the relevant pin mappings that align with the PCF file and Verilog code.
+##### 2. Establish the Physical Connections
+Use the datasheet as a reference to ensure correct pin-to-signal mapping in the PCF file.
+Properly connect the board to your computer using USB-C while ensuring the FTDI connection is intact.
+##### 3. Build and Flash the Verilog Code
+Follow the [Makefile](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Makefile.txt) instructions to compile and upload the design onto the FPGA:
+
+**Clean Previous Builds:**
+```
+make clean
+```
+This removes any existing compiled files to avoid conflicts.
+
+**Compile the Design:**
+```
+make build
+```
+This step synthesizes and prepares the Verilog design for programming.
+
+**Flash the FPGA Board:**
+```
+sudo make flash
+```
+This uploads the bitstream to the FPGA.
+
+##### 4. Verify the Board’s Behavior
+After flashing, observe the RGB LED on the FPGA board.
+
+The LED should blink, confirming a successful upload and execution of the Verilog design.
+
+##### Post Flashing: Expected Board State
+(Insert an image of the board after ‘make clean’ to showcase the correct setup before flashing.)
+
+##### Final Behavior Verification
+The file fpga.mp4 can be referred to for expected results.
+

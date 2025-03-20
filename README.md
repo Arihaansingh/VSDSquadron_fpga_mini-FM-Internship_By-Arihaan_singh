@@ -103,6 +103,7 @@ We can easily create a Physical Constraints File (PCF). We can create the Physic
 
 2. Consult the VSDSquadronFM Datasheet: The datasheet provides detailed information about the board's pinout and functionalities. Locate the section detailing the FPGA's pin assignments to understand which physical pins correspond to specific functions.
    ![image](https://github.com/user-attachments/assets/47e8710a-fb94-42d5-94e4-c63b50327710)
+   
 See this image of the Datasheet which tells about the pin assignments
 
 4. Create the PCF File: Using the information from the datasheet, map each Verilog I/O port to the appropriate physical pin. For example, if your Verilog module has an output led_red and the datasheet indicates that the red LED is connected to pin 39, your PCF entry would be:
@@ -194,3 +195,40 @@ The LED should blink, confirming a successful upload and execution of the Verilo
 ![image](https://github.com/user-attachments/assets/edb4d36d-8c6a-4e28-bddf-f5a7a6436570)
 </details>
 
+### Step 4: Final documentation
+<details>
+      <summary><STRONG>VSDSquadron FM integration</STRONG></summary>
+
+#### Summary of Verilog Code Functionality
+This Verilog module is designed to control an RGB LED using an internal high-frequency oscillator (SB_HFOSC) and a 28-bit frequency counter. The module routes bit 5 of the counter to a testwire for monitoring purposes. The SB_RGBA_DRV driver handles current-controlled PWM outputs, setting the blue LED at maximum brightness while keeping the red and green LEDs at minimum. This configuration ensures stable LED operation with minimal external dependencies, making it well-suited for embedded systems.
+
+#### Pin Mapping Details (PCF File)
+The Physical Constraints File  [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VsdFpgaMini.pcf) maps FPGA logical signals to their respective hardware pins as follows:
+
+Red LED → Pin 39
+Blue LED → Pin 40
+Green LED → Pin 41
+Clock Signal → Pin 20
+Testwire → Pin 17
+
+   ![image](https://github.com/user-attachments/assets/47e8710a-fb94-42d5-94e4-c63b50327710)
+   
+This mapping aligns with the VSDSquadron FPGA Mini board datasheet, ensuring correct functionality.
+
+#### Understanding and Implementing the Verilog Code
+- Set Up the Development Environment
+
+- Ensure that the PCF file mappings match the physical connections on the FPGA board.
+- Connect the board to the computer using USB-C, ensuring proper FTDI communication.
+- Compile and Flash the Verilog Code
+
+**Run the following commands in the project directory:**
+```
+make clean   # Clears previous builds
+make build   # Compiles the design
+sudo make flash   # Programs the FPGA board
+```
+#### Verify LED Behavior
+
+Once programmed, the RGB LED should start blinking.
+This confirms that the FPGA has been successfully programmed.

@@ -185,7 +185,6 @@ This uploads the bitstream to the FPGA.
 
 ##### 4. Verify the Board’s Behavior
 After flashing, observe the RGB LED on the FPGA board.
-
 The LED should blink, confirming a successful upload and execution of the Verilog design.
 
 ##### Post Flashing: Expected Board State

@@ -204,17 +204,13 @@ This Verilog module is designed to control an RGB LED using an internal high-fre
 
 #### Pin Mapping Details (PCF File)
 The Physical Constraints File  [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VsdFpgaMini.pcf) maps FPGA logical signals to their respective hardware pins as follows:
-
+```
 Red LED → Pin 39
-
 Blue LED → Pin 40
-
 Green LED → Pin 41
-
 Clock Signal → Pin 20
-
 Testwire → Pin 17
-
+```
    ![image](https://github.com/user-attachments/assets/47e8710a-fb94-42d5-94e4-c63b50327710)
    
 This mapping aligns with the VSDSquadron FPGA Mini board datasheet, ensuring correct functionality.

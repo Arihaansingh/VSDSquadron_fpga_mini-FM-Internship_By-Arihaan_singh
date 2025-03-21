@@ -194,7 +194,7 @@ This uploads the bitstream to the FPGA.
 After flashing, observe the RGB LED on the FPGA board.
 
 
-[Video](https://github.com/user-attachments/assets/06b0c2ed-560e-42ac-aef2-7f4ecaa3b3af)
+[Video](https://github.com/user-attachments/assets/f6b9ed3f-f884-4059-9814-a0b347917e50)
 
 
 The LED should blink, confirming a successful upload and execution of the Verilog design.
@@ -241,3 +241,8 @@ sudo make flash   # Programs the FPGA board
 
 Once programmed, the RGB LED should start blinking.
 This confirms that the FPGA has been successfully programmed.
+
+#### Problems faced
+
+![image](https://github.com/user-attachments/assets/109ce2af-fa2d-45d1-a89b-fa0350d4b263)
+

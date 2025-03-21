@@ -171,6 +171,7 @@ Follow the [Makefile](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-I
 make clean
 ```
 ![image](https://github.com/user-attachments/assets/f04a46d0-f8ac-4110-8a3b-0ab6d49c6728)
+
 This removes any existing compiled files to avoid conflicts.
 
 **Compile the Design:**
@@ -178,6 +179,7 @@ This removes any existing compiled files to avoid conflicts.
 make build
 ```
 ![image](https://github.com/user-attachments/assets/ae92a8c9-e01b-43b8-b764-aff532544da7)
+
 This step synthesizes and prepares the Verilog design for programming.
 
 **Flash the FPGA Board:**
@@ -185,14 +187,17 @@ This step synthesizes and prepares the Verilog design for programming.
 sudo make flash
 ```
 ![image](https://github.com/user-attachments/assets/6e29b8b7-4194-460d-beba-092d80987b3f)
+
 This uploads the bitstream to the FPGA.
 
 ##### 4. Verify the Board’s Behavior
 After flashing, observe the RGB LED on the FPGA board.
 The LED should blink, confirming a successful upload and execution of the Verilog design.
 
-##### Post Flashing: Expected Board State
+*Figure: Board after 'make clean' process*
+
 ![image](https://github.com/user-attachments/assets/edb4d36d-8c6a-4e28-bddf-f5a7a6436570)
+
 </details>
 
 ### Step 4: Final documentation

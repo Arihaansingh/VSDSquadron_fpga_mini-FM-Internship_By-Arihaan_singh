@@ -1,4 +1,14 @@
-# VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh
+# VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh## Table of Contents
+- [Introduction](#introduction)
+- [Task 1: Understanding and Implementing the Verilog Code](#task-1-understanding-and-implementing-the-verilog-code)
+  - [Step 1: Understanding the Verilog Code](#step-1-understanding-the-verilog-code)
+  - [Step 2: Creating the PCF File](#step-2-creating-the-pcf-file)
+  - [Step 3: Integrating with the VSDSquadron FPGA Mini Board](#step-3-integrating-with-the-vsdsquadron-fpga-mini-board)
+  - [Step 4: Final Documentation](#step-4-final-documentation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 The VSDSquadron FPGA Mini (FM) is a compact and low-cost development board designed for FPGA prototyping and embedded system projects. This board provides a seamless hardware development experience with an integrated programmer, versatile GPIO access, and onboard memory, making it ideal for students, hobbyists, and developers exploring FPGA-based designs. [(Source)](https://www.vlsisystemdesign.com/vsdsquadronfm/)
 ## Task 1 Understanding and Implementing the Verilog Code on the VSDSquadron FPGA Mini Board
 ### Step 1: Understanding the Verilog code

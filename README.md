@@ -9,6 +9,7 @@
 [VSDSquadron FPGA Mini (FM)](https://www.vlsisystemdesign.com/vsdsquadronfm/)
 ## Tasks
 [Task 1](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%201%20.md) -The project focuses on implementing and testing an FPGA-based RGB LED controller on the VSDSquadron FPGA Mini board. It involves analyzing a Verilog design, mapping pin configurations using a PCF file, and programming the FPGA to control LED behavior using an internal oscillator.
+[Task 2]() -The project focuses on implementing and testing an FPGA-based RGB LED controller on the VSDSquadron FPGA Mini board. It involves analyzing a Verilog design, mapping pin configurations using a PCF file, and programming the FPGA to control LED behavior using an internal oscillato
 
 
 

@@ -1,10 +1,14 @@
 # VSDSquadron FPGA Mini (FM) Internship 
 ## Acknowledgement
-Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
-Professor Madhav Roa, International Institute of Information Technology, Bangalore
-Professor Subir K Roy, International Institute of Information Technology, Bangalore
-Professor Himanshu Rai, International Institute of Information Technology, Bangalore
-Mr. Sudarshan R, National Institute of Advanced Studies (NIAS)
+### Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+
+### Professor Madhav Roa, International Institute of Information Technology, Bangalore
+
+### Professor Subir K Roy, International Institute of Information Technology, Bangalore
+
+### Professor Himanshu Rai, International Institute of Information Technology, Bangalore
+
+### Mr. Sudarshan R, National Institute of Advanced Studies (NIAS)
 ## Resources
 [VSDSquadron FPGA Mini (FM)](https://www.vlsisystemdesign.com/vsdsquadronfm/)
 ## Tasks

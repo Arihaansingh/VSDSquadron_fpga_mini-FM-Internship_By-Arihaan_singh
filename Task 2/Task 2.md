@@ -78,3 +78,4 @@ This module is designed to implement a UART loopback mechanism while also contro
 
   **This system efficiently tests UART communication while providing real-time LED feedback. 🌟**
   </details>
+![image](https://github.com/user-attachments/assets/36fe2f6a-95c5-4d34-b74c-1568dbffcdf5)

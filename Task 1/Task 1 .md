@@ -2,7 +2,7 @@
 The VSDSquadron FPGA Mini (FM) is a compact and low-cost development board designed for FPGA prototyping and embedded system projects. This board provides a seamless hardware development experience with an integrated programmer, versatile GPIO access, and onboard memory, making it ideal for students, hobbyists, and developers exploring FPGA-based designs. [(Source)](https://www.vlsisystemdesign.com/vsdsquadronfm/)
 ## Task 1 Understanding and Implementing the Verilog Code on the VSDSquadron FPGA Mini Board
 ### Step 1: Understanding the Verilog code
-The Verilog code can be accessed from here [Verilog code](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VSDFM_top_module.v) This Verilog module controls an RGB LED using an internal oscillator and a counter, with a test signal for monitoring and predefined brightness settings for the LEDs.
+The Verilog code can be accessed from here [Verilog code](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%201/VSDFM_top_module.v) This Verilog module controls an RGB LED using an internal oscillator and a counter, with a test signal for monitoring and predefined brightness settings for the LEDs.
 
 <details>
   <summary><STRONG> Verilog module overview</STRONG></summary>
@@ -91,7 +91,7 @@ In short, **This Verilog module controls an RGB LED using an internal oscillator
 
 ### Step 2: Creating the PCF File
 
-The PCF (Physical Constraints File) can be acessed here [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VsdFpgaMini.pcf). A PCF (Physical Constraints File) is used in FPGA design to define the mapping between logical signals in the HDL design and the physical pins of the FPGA device. It ensures that specific signals, such as clock inputs, LED outputs, or communication interfaces, are correctly assigned to the appropriate hardware pins. The PCF file consists of simple constraints using the `set_io1` command, associating signal names with pin numbers. This file plays a crucial role in ensuring proper hardware functionality, as incorrect assignments can lead to design failures or unexpected behavior
+The PCF (Physical Constraints File) can be acessed here [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%201/VsdFpgaMini.pcf). A PCF (Physical Constraints File) is used in FPGA design to define the mapping between logical signals in the HDL design and the physical pins of the FPGA device. It ensures that specific signals, such as clock inputs, LED outputs, or communication interfaces, are correctly assigned to the appropriate hardware pins. The PCF file consists of simple constraints using the `set_io1` command, associating signal names with pin numbers. This file plays a crucial role in ensuring proper hardware functionality, as incorrect assignments can lead to design failures or unexpected behavior
 
 <details>
   <summary><STRONG> PCF analysis</STRONG></summary>
@@ -110,7 +110,7 @@ See this image of the Datasheet which tells about the pin assignments
 ```
 set_io  led_red	39
 ```
-So for this project we have created the [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VsdFpgaMini.pcf).
+So for this project we have created the [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%201/VsdFpgaMini.pcf).
 
 ![image](https://github.com/user-attachments/assets/6ec66888-4189-416a-a14e-0b1065d70a05)
 
@@ -164,7 +164,7 @@ Identify the relevant pin mappings that align with the PCF file and Verilog code
 Use the datasheet as a reference to ensure correct pin-to-signal mapping in the PCF file.
 Properly connect the board to your computer using USB-C while ensuring the FTDI connection is intact.
 ##### 3. Build and Flash the Verilog Code
-Follow the [Makefile](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Makefile.txt) instructions to compile and upload the design onto the FPGA:
+Follow the [Makefile](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%201/Makefile) instructions to compile and upload the design onto the FPGA:
 
 **Clean Previous Builds:**
 ```
@@ -213,7 +213,7 @@ The LED should blink, confirming a successful upload and execution of the Verilo
 This Verilog module is designed to control an RGB LED using an internal high-frequency oscillator (SB_HFOSC) and a 28-bit frequency counter. The module routes bit 5 of the counter to a testwire for monitoring purposes. The SB_RGBA_DRV driver handles current-controlled PWM outputs, setting the blue LED at maximum brightness while keeping the red and green LEDs at minimum. This configuration ensures stable LED operation with minimal external dependencies, making it well-suited for embedded systems.
 
 #### Pin Mapping Details (PCF File)
-The Physical Constraints File  [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/VsdFpgaMini.pcf) maps FPGA logical signals to their respective hardware pins as follows:
+The Physical Constraints File  [(PCF)](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%201/VsdFpgaMini.pcf) maps FPGA logical signals to their respective hardware pins as follows:
 ```
 Red LED → Pin 39
 Blue LED → Pin 40

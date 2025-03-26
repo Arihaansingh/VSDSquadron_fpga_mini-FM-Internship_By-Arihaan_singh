@@ -1,4 +1,4 @@
-# Define project-specific variables
+# Define project-specific variables 
 TOP=top
 PCF_FILE=VSDSquadronFM
 BOARD_FREQ=12

@@ -87,8 +87,9 @@ This module is designed to implement a UART loopback mechanism while also contro
 ![image](https://github.com/user-attachments/assets/36fe2f6a-95c5-4d34-b74c-1568dbffcdf5)
   </details>
   <details>
-     <summary><STRONG> Detailed circuit diagram showing connections between the FPGA and any peripheral devices used</STRONG></summary>
-![image](https://github.com/user-attachments/assets/c12b02d6-1b4d-41a3-841e-328ac90cc7b9)
+     <summary><STRONG> Detailed circuit diagram showing connections between the FPGA and any peripheral devices used</STRONG></summary> 
+    
+![image](https://github.com/user-attachments/assets/eaff15eb-6a90-42c3-a44e-727a38fbbf84)
   </details>
   </details>
 

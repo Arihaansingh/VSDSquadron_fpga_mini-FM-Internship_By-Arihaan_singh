@@ -170,7 +170,7 @@ sudo make flash
 **📥 Download & Install Docklight**
 
 To test the UART loopback, we will be using Docklight, a serial communication software. You can download it from the [Docklight website](https://docklight.de/downloads/)
-
+***
 **🔌 Connecting & Configuring Docklight**
 
 1️⃣ Open Docklight
@@ -190,7 +190,7 @@ Tools > Project Settings
 3️⃣ Set the Baud Rate
 
 **Speed: 9600**
-
+***
 **✉️ Sending & Receiving Data**
 
 **🔹 Create a Send Sequence:**
@@ -212,7 +212,7 @@ Tools > Project Settings
 2️⃣ Verify the Response in the Receive Window.
 
 **✅ If successful, the received message should match the sent message!**
-
+***
 ### 🎯 Conclusion
 🎉 You have successfully configured Docklight for UART loopback testing! Now, you can communicate with your FPGA and verify UART transmission! 🚀
   </details>

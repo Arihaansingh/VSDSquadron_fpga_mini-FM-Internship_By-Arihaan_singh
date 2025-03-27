@@ -158,6 +158,8 @@ make build
 sudo make flash
 ```
 
+![image](https://github.com/user-attachments/assets/2c3160a3-596d-4e4b-8dae-1a03cab8b66f)
+
 ✔️ Congratulations! You have successfully programmed your VSDSquadron FPGA for UART loopback testing! 🚀
   </details>
 

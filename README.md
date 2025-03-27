@@ -64,6 +64,7 @@ capabilities
 - [Task 2](https://github.com/Arihaansingh/VSDSquadron_fpga_mini-FM-Internship_By-Arihaan_singh/blob/main/Task%202/Task%202.md) -The project implements a UART loopback mechanism on the VSDSquadron FPGA Mini, where transmitted data is immediately received back, enabling easy testing and debugging of UART functionality
 ## ✍ Author
 **Arihaan singh**
+
 **Github-** [Arihaan Singh](https://github.com/Arihaansingh)
 
 

@@ -219,7 +219,7 @@ Tools > Project Settings
 ## Step 3 Final Documentation
     
 <details>      
-    <summary><STRONG> Analysis</STRONG></summary>
+    <summary><STRONG>Block and Circuit diagram</STRONG></summary>
 <details>
      <summary><STRONG> Block diagram illustrating the UART loopback architecture</STRONG></summary
                                                                                            

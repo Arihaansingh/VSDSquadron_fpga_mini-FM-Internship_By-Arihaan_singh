@@ -93,3 +93,69 @@ This module is designed to implement a UART loopback mechanism while also contro
   </details>
   </details>
 
+ ## Step 3 Implementation
+  <details>
+       <summary><STRONG> Transmitting code to FPGA Board</STRONG></summary>
+    
+### 🚀 UART Loopback on VSDSquadron FPGA
+
+**📁 Setting Up the Project**
+
+1. Create the following files inside a new folder under VSDSquadron_FM. In this case, the folder is named uart_loopback:
+
+📜 Files to Create:
+
+- 🛠️ Makefile
+- 💾 uart_trx- Verilog
+- 🏗️ Verilog file
+- 📌 pcf (Pin Constraint File)
+- 📌top module
+
+📌 Folder Structure:
+
+```
+VSDSquadron_FM/
+ ├── uart_loopback/
+ │   ├── Makefile
+ │   ├── uart_trx.v
+ │   ├── top.v
+ │   ├── uart_loopback.pcf
+```
+
+### 🔌 Connecting the FPGA Board
+
+1️⃣ Plug in the FPGA Board to your system via USB-C.
+
+2️⃣ Verify the Connection by running:
+
+```
+lsusb
+```
+
+💡 If the board is detected, you should see:
+
+```
+Future Technology Devices International
+```
+
+### 🛠️ Building & Flashing the Code
+
+🔹 Navigate to the Folder
+
+```
+cd VSDSquadron_FM/uart_loopback
+```
+
+🔹 Build the Design
+
+```
+make build
+```
+
+🔹 Flash the FPGA Board (Run with sudo)
+
+```
+sudo make flash
+```
+
+✔️ Congratulations! You have successfully programmed your VSDSquadron FPGA for UART loopback testing! 🚀

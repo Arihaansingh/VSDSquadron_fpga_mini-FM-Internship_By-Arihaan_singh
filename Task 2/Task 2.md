@@ -213,12 +213,12 @@ Tools > Project Settings
 
 **✅ If successful, the received message should match the sent message!**
 ***
-### 🎯 Conclusion
-🎉 You have successfull  </details>
-  F    <details>
-y configured Docklight for UART loopback testing! Now, you can communicate with your FPGA and verify UART transmission! 🚀
-       <summary><STRONG> Analysis</STRONG></summary>
-    <details>
+✔️ Congratulations! You have successfully programmed your VSDSquadron FPGA for UART loopback testing! 🚀
+
+## Step 3 Final Documentation
+    
+    <details>       <summary><STRONG> Analysis</STRONG></summary>
+<details>
      <summary><STRONG> Block diagram illustrating the UART loopback architecture</STRONG></summary>
 ![image](https://github.com/user-attachments/assets/36fe2f6a-95c5-4d34-b74c-1568dbffcdf5)
   </details>

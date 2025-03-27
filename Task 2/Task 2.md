@@ -159,3 +159,60 @@ sudo make flash
 ```
 
 ✔️ Congratulations! You have successfully programmed your VSDSquadron FPGA for UART loopback testing! 🚀
+  </details>
+
+ ## Step 4 Testing and Verification
+  <details>
+       <summary><STRONG> Testing and Verification</STRONG></summary>
+
+### 🖥️ Setting Up Docklight for UART Loopback Testing
+
+**📥 Download & Install Docklight**
+
+To test the UART loopback, we will be using Docklight, a serial communication software. You can download it from the [Docklight website](https://docklight.de/downloads/)
+
+**🔌 Connecting & Configuring Docklight**
+
+1️⃣ Open Docklight
+
+2️⃣ Verify the Communication Port
+
+**Ensure your system (not the VM) is connected to the correct COM port.*
+
+**Default is COM1, but in my case, it was COM7.*
+
+**If incorrect, change it by navigating to:*
+
+```
+Tools > Project Settings
+```
+
+3️⃣ Set the Baud Rate
+
+**Speed: 9600**
+
+**✉️ Sending & Receiving Data**
+
+**🔹 Create a Send Sequence:**
+
+1️⃣ Double-click on the small blue box under the "Name" column in the Send Sequences panel.
+
+2️⃣ Enter the following details:
+
+- 🏷️ Name: (Any descriptive label for your message)
+- 🔣 Format: (Choose an appropriate data format)
+- ✍️ Message: (Enter the message you want to send)
+
+3️⃣ Click "Apply" and verify that your message appears under Send Sequences.
+
+🔹 Transmit the Message:
+
+1️⃣ Click the ➡️ (arrow) beside the name to send the message.
+
+2️⃣ Verify the Response in the Receive Window.
+
+**✅ If successful, the received message should match the sent message!**
+
+### 🎯 Conclusion
+🎉 You have successfully configured Docklight for UART loopback testing! Now, you can communicate with your FPGA and verify UART transmission! 🚀
+  </details>
